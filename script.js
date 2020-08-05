@@ -35,7 +35,7 @@ window.addEventListener("load", function() {
       if (pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === "" || cargoMassInput.value === "") {
          alert("All fields are required!")
          event.preventDefault();
-      } else if (pilotNameInput.value !== "" || copilotNameInput.value !== ""|| isNaN(fuelLevelInput.value) || isNaN(cargoMassInput.value)) {
+      } else if (!isNaN(pilotNameInput.value) || !isNaN(copilotNameInput.value) || isNaN(fuelLevelInput.value) || isNaN(cargoMassInput.value)) {
          alert("Make sure to enter valid information for each field!");
          event.preventDefault();
       } else if (fuelLevelInput.value > 10000 && cargoMassInput.value < 10000) {
